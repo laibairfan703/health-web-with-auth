@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+        :root {
+            --primary-color: #12ac8e;
+            --primary-color-dark: #0d846c;
+            --primary-color-light: #e9f7f7;
+            --secondary-color: #fb923c;
+            --text-dark: #333333;
+            --text-light: #767268;
+            --white: #ffffff;
+            --max-width: 1200px;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--primary-color-light);
+            color: var(--text-dark);
+        }
+
+        .footer__col {
+            background-color: var(--white);
+            width: 90%;
+            max-width: var(--max-width);
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .footer__col h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .footer__col p {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin: 10px 0;
+        }
+
+        div h4 {
+            font-size: 1.5rem;
+            color: var(--primary-color-dark);
+            margin-top: 20px;
+        }
+
+        div p {
+            font-size: 1rem;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .cta-section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .cta-section h4 {
+            font-size: 1.8rem;
+        }
+
+        .cta-section p {
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+
+        .cta-section button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: var(--white);
+            background-color: var(--secondary-color);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .cta-section button:hover {
+            background-color: var(--primary-color-dark);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .footer__col h1 {
+                font-size: 2rem;
+            }
+
+            .footer__col p,
+            div p {
+                font-size: 0.9rem;
+            }
+
+            div h4 {
+                font-size: 1.3rem;
+            }
+
+            .cta-section h4 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="footer__col">
+            <h1>Our Services</h1>
+            <p>Comprehensive Search Tools</p>
+            <p>Advanced Search Capabilities</p>
+            <p>Privacy and Security Policies</p>
+            <p>Supplier Network</p>
+            <p>Global Store Locator</p>
+        </div>
+
+        <div>
+            <h4>Medical and Surgical Solutions</h4>
+            <p>
+                We provide state-of-the-art medical and surgical services designed to deliver
+                exceptional healthcare solutions tailored to meet your unique needs. Our team is
+                committed to ensuring the highest standards of care and innovation.
+            </p>
+        </div>
+
+        <div>
+            <h4>Customer-Centric Approach</h4>
+            <p>
+                Our services are designed with you in mind. We ensure seamless customer support,
+                intuitive tools, and a commitment to delivering value at every interaction.
+            </p>
+        </div>
+
+        <div>
+            <h4>Global Network of Professionals</h4>
+            <p>
+                With a network of highly skilled professionals across the globe, we offer
+                expertise in diverse domains, ensuring quality and consistency in every service.
+            </p>
+        </div>
+
+        <div class="cta-section">
+            <h4>Ready to Learn More?</h4>
+            <p>
+                Discover how our tailored services can empower you to achieve your goals. Contact
+                our team for a personalized consultation today!
+            </p>
+            <button onclick="window.location.href='#'">Get Started</button>
+        </div>
+    </center>
+</body>
+</html>

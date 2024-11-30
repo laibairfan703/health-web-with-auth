@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+        :root {
+            --primary-color: #12ac8e;
+            --primary-color-dark: #0d846c;
+            --primary-color-light: #e9f7f7;
+            --secondary-color: #fb923c;
+            --text-dark: #333333;
+            --text-light: #767268;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--primary-color-light);
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer__col {
+            background-color: var(--white);
+            width: 80%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .footer__col h4 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .footer__col p {
+            font-size: 1rem;
+            color: var(--text-dark);
+            margin: 10px 0;
+        }
+
+        .footer__col p i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+
+        .footer__col ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .footer__col ul li {
+            margin: 5px 0;
+            font-size: 1rem;
+            color: var(--text-light);
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 10px 5px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color-dark);
+        }
+
+        .faq-link {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            color: var(--white);
+            background-color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .faq-link:hover {
+            background-color: var(--primary-color-dark);
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: var(--text-light);
+            margin: 20px 0;
+        }
+
+        .newsletter {
+            margin-top: 20px;
+        }
+
+        .newsletter input {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .newsletter button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: var(--white);
+            background-color: var(--secondary-color);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .newsletter button:hover {
+            background-color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="footer__col">
+            <h4>Contact Us</h4>
+            <p>
+                <i class="ri-map-pin-2-fill"></i> 123, London Bridge Street, London
+            </p>
+            <p><i class="ri-mail-fill"></i> support@care.com</p>
+            <p><i class="ri-phone-fill"></i> (+012) 3456 789</p>
+            <hr />
+            <p>We are available 24/7 to assist you. Don't hesitate to get in touch!</p>
+            <ul>
+                <li>Office Hours: Monday - Friday, 9 AM - 6 PM</li>
+                <li>Customer Support: Available 24/7</li>
+            </ul>
+            <p>Follow us on social media for the latest updates:</p>
+            <div class="social-links">
+                <a href="#" title="Facebook"><i class="ri-facebook-circle-fill"></i> Facebook</a>
+                <a href="#" title="Twitter"><i class="ri-twitter-fill"></i> Twitter</a>
+                <a href="#" title="Instagram"><i class="ri-instagram-fill"></i> Instagram</a>
+                <a href="#" title="LinkedIn"><i class="ri-linkedin-fill"></i> LinkedIn</a>
+            </div>
+            <hr />
+            <p>Need help urgently? Visit our FAQ section or chat with us live!</p>
+            <a href="/faq" class="faq-link"><i class="ri-question-fill"></i> FAQs</a>
+            <hr />
+            <div class="newsletter">
+                <p>Subscribe to our newsletter for the latest updates:</p>
+                <form id="newsletterForm">
+                    <input type="email" id="emailInput" placeholder="Enter your email" required />
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </center>
+
+    <script>
+        // Array to store subscribed emails
+        const subscribedEmails = [];
+
+        // Handle form submission
+        document.getElementById('newsletterForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+            const emailInput = document.getElementById('emailInput');
+            const email = emailInput.value.trim();
+
+            if (email) {
+                subscribedEmails.push(email); // Add email to array
+                alert(`Thank you for subscribing! Email saved: ${email}`);
+                emailInput.value = ''; // Clear input field
+                console.log('Subscribed Emails:', subscribedEmails); // For debugging
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        });
+    </script>
+</body>
+</html>
